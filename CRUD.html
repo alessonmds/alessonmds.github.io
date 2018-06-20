@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <title>CRUD</title>
+</head>
+<body>
+   
+    <input type="texT" id="nome" onkeypress="adicionarViaEnter(event)" placeholder="Nome"/>
+        
+    <button type="button" onclick="adicionar()">SALVAR</button>
+    
+    <ol id="listaDeImpressao">
+        
+    </ol>
+    
+    <script type="text/javascript">
+        
+        var listaDeNomes = [];
+        
+        var listaDeImpressao = document.getElementById('listaDeImpressao');
+        
+        //listaDeImpressao.innerHTML = '<li>Novo elemento</li><li>Novo elemento 2</li>';
+        
+        var valorDoInput = document.getElementById('nome');
+        
+        function adicionar(){
+            if(valorDoInput.value !== ''){
+            listaDeNomes.push(valorDoInput.value);
+            impressao();
+            valorDoInput.value = '';
+         }
+        }
+        
+        
+        function limpar(){
+            listaDeImpressao.innerHTML = '';
+        }
+        
+        function adicionarViaEnter(event){
+            if(event.keyCode == 13){
+                adicionar();
+            }
+        }
+        
+        
+        function remover(idx){
+            listaDeNomes.splice(idx, 1);
+            impressao();
+        }
+        
+        
+        function impressao(){
+            limpar();
+        listaDeNomes.forEach(function(item, idx){            
+            listaDeImpressao.innerHTML = listaDeImpressao.innerHTML +'<li><a href="javascript:void(0)" onclick="remover(\'' + idx + '\')">' + item + '</a>' + '</li>';            
+         });
+        }
+        
+        impressao();
+        
+    </script>
+</body>
+</html>
