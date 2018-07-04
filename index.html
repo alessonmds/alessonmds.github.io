@@ -1,26 +1,130 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edger">
-	<meta charset="utf-8">
-	<title>Alesson Marques</title>
-</head>
-<body>
-	<table>
-		<thead>
-			<tr>
-			<th>Nome</th>
-			<th>Valor</th>
-		</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Alesson</td>
-				<td>2018</td>
-			</tr>
-		</tbody>
-	</table>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <title>Alesson Marques</title>
+    <meta name="description" content="Sou PW e estudo no senai, gosto de jogar video games e assistir series, animes e etc...">
+    <meta property="og:description" content="Sou PW e estudo no Senai, gosto de jogar video games e assistir series, animes e etc...">
+    <meta property="og:image" content="https://avatars2.githubusercontent.com/u/40008417?s=400&u=9eadb9e54897cc98176c218c6636b2c720c25959&v=4">   
+    <style>
+      body {
+        background-color: gray;
+        font-family: monospace;
+        text-align: center;
+        color: white;
+      }
+      h1 {
+        font-size: 30px;
+        color: #f1f0f0;
+      }
+      h2 {
+        font-size: 15px;
+        margin: 10px 0;
+      }
+      a {
+        color: red;
+        text-decoration: none;
+      }
+      section {
+        margin: 15px 0;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        min-height: 95vh;
+      }
+      header {
+        color: black;
+      }
+      header .photo img {
+        border-radius: 100%;
+      }
+      header .basic-info .current-role {
+        font-size: 20px;
+      }
+      header .sub-current-role {
+        font-size: 16px;
+        margin-bottom: 25px;
+      }
+      .contact {
+        margin-top: 0;
+      }
+      .contact h2 {
+        display: none;
+      }
+      .socials {
+        margin: 15px 0;
+      }
+      .tags .tag {
+        padding: 6px 10px;
+        background-color: #312727;
+        font-size: 10px;
+        border-radius: 10px;
+        display: inline-block;
+        margin: 5px 0;
+      }
+      .companies img {
+        margin: 10px;
+        height: 25px;
+      }
+        .tag:hover {
+            color: red;
+        }
+        .image-inline {
+            display:inline;
+        }
+    </style>
+  </head>
 
-</body>
+  <body>
+    <main class="container">
+      <header>
+        <div class="photo">
+          <img src="https://i.pinimg.com/originals/73/db/97/73db97c0c4a9c9b009d69f21ea48ecdc.png" alt="Alesson Marques" width="139" height="142">
+        </div>
+        <div class="basic-info">
+          <h1>Alesson Marques</h1>
+          <p class="current-role">PW e Estudante do Senai</p>
+          <p class="sub-current-role">Sou PW e estudo no Senai, gosto de jogar video games e assistir series, animes e etc... A minha saga favotira é a souls/borne</p>
+        </div>
+      </header>
+      <section class="contact">
+        <h2 aria-hidden="true">Contact</h2>
+        <div>Email: <a href="mailto:alesson_silva@estudante.sc.senai.br">@alessonmds.com</a></div>
+        <div>Github: <a href="https://github.com/alessonmds" target="_blank" rel="noopener">@alessonmds</a></div>
+        <div>Facebook: <a href="https://www.facebook.com/profile.php?id=100015045819534" target="_blank" rel="noopener">Alesson Marques</a></div>
+      </section>
+      <section class="tags">
+        <h2>Experiência</h2>
+        <span class="tag">Python</span>
+        <span class="tag">Deployment</span>
+        <span class="tag">Javascript</span>
+      </section>
+        <div style="position:absolute; left: 20%; top:90%">
+            <img src = "http://www.freepngimg.com/download/dark_souls/8-2-dark-souls-png-picture.png" style = "width: 200px"/>
+        </div>
+        <div style="position:absolute; left:45%; top:90%">
+            <img src = "https://vignette.wikia.nocookie.net/liberproeliis/images/d/d1/Capa_Bloodborne.png/revision/latest?cb=20171231021739&path-prefix=pt-br" style = "width: 200px"/>
+        </div>
+         <div style="position:absolute; left:70%; top:100%">
+            <img src = "https://jogadorpensante.files.wordpress.com/2011/11/logo.png" style = "width: 200px"/>
+        </div>
+    </main>
+    <div style="position:absolute; left:47%; top:130%">
+      <footer id="meu-footer"></footer>
+      <script type="text/javascript">
+        var footerMeuSite = document.getElementById('meu-footer');
+          
+          setInterval(function(){
+            var minhaData = new Date();
+            footerMeuSite.innerHTML = (minhaData.getDate()) + '/' + (minhaData.getMonth() + 1) + '/' + (minhaData.getFullYear()) + " " + (minhaData.getHours()) + ":" + (minhaData.getMinutes()) + ":" + (minhaData.getSeconds()); 
+          }, 1000);          
+          
+      </script>
+        </div>
+    </body>
 </html>
